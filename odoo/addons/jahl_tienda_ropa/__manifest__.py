@@ -27,6 +27,9 @@ Long description of module's purpose
         'views/templates.xml',
         'views/producto_view.xml',
         'views/cliente_view.xml',
+        'views/pedido_view.xml',
+        'views/inventario.xml',
+        
     ],
     # only loaded in demonstration mode
     'demo': [

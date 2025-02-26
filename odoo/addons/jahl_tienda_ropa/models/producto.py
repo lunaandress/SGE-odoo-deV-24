@@ -14,6 +14,7 @@ class Producto(models.Model):
         [('camisa', 'Camisa'), ('pantalon', 'Pantalón'), ('zapato', 'Zapato')],
         string='Categoría', default='camisa'  # Definir una categoría predeterminada
     )
+    imagen = fields.Image(string="Imagen del Producto")
 
     # Métodos
     def actualizar_stock(self, cantidad):

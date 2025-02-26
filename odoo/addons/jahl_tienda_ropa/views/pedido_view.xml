@@ -1,0 +1,48 @@
+<odoo>
+    <!-- Menú raíz para el módulo -->
+    <menuitem id="menu_root" name="Tienda de Ropa" sequence="1"/>
+
+    <!-- Vista de lista para los pedidos -->
+    <record id="view_pedido_tree" model="ir.ui.view">
+        <field name="name">jahl.tiendaropa.pedido.tree</field>
+        <field name="model">jahl_tiendaropa.pedido</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="cliente_id"/>
+                <field name="fecha_pedido"/>
+                <field name="estado"/>
+                <field name="total"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de formulario para los pedidos -->
+    <record id="view_pedido_form" model="ir.ui.view">
+        <field name="name">jahl.tiendaropa.pedido.form</field>
+        <field name="model">jahl_tiendaropa.pedido</field>
+        <field name="arch" type="xml">
+            <form string="Pedido">
+                <sheet>
+                    <group>
+                        <field name="cliente_id"/>
+                        <field name="producto_ids" widget="many2many_tags"/>
+                        <field name="fecha_pedido"/>
+                        <field name="estado"/>
+                        <field name="total" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción para abrir la vista de pedidos -->
+    <record id="action_pedido" model="ir.actions.act_window">
+        <field name="name">Pedidos</field>
+        <field name="res_model">jahl_tiendaropa.pedido</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">current</field>
+    </record>
+
+    <!-- Menú para acceder al modelo Pedido -->
+    <menuitem id="menu_pedido" name="Pedidos" parent="menu_root" action="action_pedido"/>
+</odoo>

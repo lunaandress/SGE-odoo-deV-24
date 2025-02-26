@@ -29,6 +29,7 @@
                         <field name="precio"/>
                         <field name="stock"/>
                         <field name="categoria"/>
+                        <field name="imagen" widget="image" options="{'no_open': True}"/>
                     </group>
                 </sheet>
             </form>
