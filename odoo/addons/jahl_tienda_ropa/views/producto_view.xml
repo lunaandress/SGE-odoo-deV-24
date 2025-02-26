@@ -1,0 +1,48 @@
+<odoo>
+    <!-- Menú principal del módulo -->
+    <menuitem id="menu_root" name="Tienda de Ropa" sequence="1"/>
+
+    <!-- Vista de lista para los productos -->
+    <record id="view_producto_tree" model="ir.ui.view">
+        <field name="name">jahl.tiendaropa.producto.tree</field>
+        <field name="model">jahl_tiendaropa.producto</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre"/>
+                <field name="precio"/>
+                <field name="stock"/>
+                <field name="categoria"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de formulario para los productos -->
+    <record id="view_producto_form" model="ir.ui.view">
+        <field name="name">jahl.tiendaropa.producto.form</field>
+        <field name="model">jahl_tiendaropa.producto</field>
+        <field name="arch" type="xml">
+            <form string="Producto">
+                <sheet>
+                    <group>
+                        <field name="nombre"/>
+                        <field name="descripcion"/>
+                        <field name="precio"/>
+                        <field name="stock"/>
+                        <field name="categoria"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción para abrir la vista de productos -->
+    <record id="action_producto" model="ir.actions.act_window">
+        <field name="name">Productos</field>
+        <field name="res_model">jahl_tiendaropa.producto</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">current</field>
+    </record>
+
+    <!-- Menú para acceder al modelo Producto -->
+    <menuitem id="menu_producto" name="Productos" parent="menu_root" action="action_producto"/>
+</odoo>
