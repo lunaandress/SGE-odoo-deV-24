@@ -1,10 +1,10 @@
 from odoo import models, fields, api
 
 class Inventario(models.Model):
-    _name = 'jahl_tiendaropa.inventario'
+    _name = 'jahl_tienda_ropa.inventario'
     _description = 'Inventario de productos en la tienda de ropa'
 
-    producto_id = fields.Many2one('jahl_tiendaropa.producto', string='Producto', required=True)
+    producto_id = fields.Many2one('jahl_tienda_ropa.producto', string='Producto', required=True)
     cantidad = fields.Integer(string='Cantidad en Inventario', required=True, default=0)
     ubicacion = fields.Char(string='Ubicación en Tienda')
     fecha_actualizacion = fields.Datetime(string='Fecha de Actualización', default=fields.Datetime.now)

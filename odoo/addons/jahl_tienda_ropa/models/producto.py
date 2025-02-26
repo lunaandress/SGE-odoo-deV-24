@@ -2,7 +2,7 @@ from odoo import models, fields
 from odoo.exceptions import UserError # type: ignore
 
 class Producto(models.Model):
-    _name = 'jahl_tiendaropa.producto'
+    _name = 'jahl_tienda_ropa.producto'
     _description = 'Producto de la tienda de ropa'
 
     # Campos de la clase Producto

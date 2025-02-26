@@ -1,7 +1,7 @@
 from odoo import models, fields
 
 class Cliente(models.Model):
-    _name = 'jahl_tiendaropa.cliente'  # Nombre técnico del modelo ajustado al nombre del módulo
+    _name = 'jahl_tienda_ropa.cliente'  # Nombre técnico del modelo ajustado al nombre del módulo
     _description = 'Cliente de la tienda de ropa'  # Descripción del modelo
 
     # Campos de la clase Cliente

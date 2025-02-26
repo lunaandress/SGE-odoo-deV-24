@@ -3,9 +3,9 @@
     <menuitem id="menu_root" name="Tienda de Ropa" sequence="1"/>
 
     <!-- Vista de lista para los productos -->
-    <record id="view_producto_tree" model="ir.ui.view">
-        <field name="name">jahl.tiendaropa.producto.tree</field>
-        <field name="model">jahl_tiendaropa.producto</field>
+    <record id="jahl_tienda_ropa.producto_tree" model="ir.ui.view">
+        <field name="name">jahl.tienda_ropa.producto.tree</field>
+        <field name="model">jahl_tienda_ropa.producto</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="nombre"/>
@@ -17,9 +17,9 @@
     </record>
 
     <!-- Vista de formulario para los productos -->
-    <record id="view_producto_form" model="ir.ui.view">
-        <field name="name">jahl.tiendaropa.producto.form</field>
-        <field name="model">jahl_tiendaropa.producto</field>
+    <record id="jahl_tienda_ropa.producto_form" model="ir.ui.view">
+        <field name="name">jahl.tienda_ropa.producto.form</field>
+        <field name="model">jahl_tienda_ropa.producto</field>
         <field name="arch" type="xml">
             <form string="Producto">
                 <sheet>
@@ -39,7 +39,7 @@
     <!-- Acción para abrir la vista de productos -->
     <record id="action_producto" model="ir.actions.act_window">
         <field name="name">Productos</field>
-        <field name="res_model">jahl_tiendaropa.producto</field>
+        <field name="res_model">jahl_tienda_ropa.producto</field>
         <field name="view_mode">tree,form</field>
         <field name="target">current</field>
     </record>

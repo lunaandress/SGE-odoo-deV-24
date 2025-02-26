@@ -1,11 +1,11 @@
 from odoo import models, fields, api
 
 class Pedido(models.Model):
-    _name = 'jahl_tiendaropa.pedido'
+    _name = 'jahl_tienda_ropa.pedido'
     _description = 'Pedido de la tienda de ropa'
 
-    cliente_id = fields.Many2one('jahl_tiendaropa.cliente', string='Cliente', required=True)
-    producto_ids = fields.Many2many('jahl_tiendaropa.producto', string='Productos')
+    cliente_id = fields.Many2one('jahl_tienda_ropa.cliente', string='Cliente', required=True)
+    producto_ids = fields.Many2many('jahl_tienda_ropa.producto', string='Productos')
     fecha_pedido = fields.Datetime(string='Fecha del Pedido', default=fields.Datetime.now)
     estado = fields.Selection([
         ('pendiente', 'Pendiente'),
