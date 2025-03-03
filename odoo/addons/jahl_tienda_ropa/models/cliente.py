@@ -1,10 +1,10 @@
 from odoo import models, fields
 
 class Cliente(models.Model):
-    _name = 'jahl_tienda_ropa.cliente'  # Nombre técnico del modelo ajustado al nombre del módulo
-    _description = 'Cliente de la tienda de ropa'  # Descripción del modelo
+    _name = 'jahl_tienda_ropa.cliente'
+    _description = 'Cliente de la tienda de ropa'
 
-    # Campos de la clase Cliente
+    
     nombre = fields.Char(string='Nombre', required=True)
     apellido = fields.Char(string='Apellido')
     correo = fields.Char(string='Correo Electrónico')
@@ -13,7 +13,7 @@ class Cliente(models.Model):
     fecha_registro = fields.Datetime(string='Fecha de Registro', default=fields.Datetime.now)
     orden_ids = fields.One2many('jahl_tienda_ropa.pedido', 'cliente_id', string='Órdenes')
 
-    # Métodos
+    
     def obtener_datos_completos(self):
         """Método para obtener los datos completos del cliente"""
         return f"{self.nombre} {self.apellido}, Email: {self.correo}, Tel: {self.telefono}"

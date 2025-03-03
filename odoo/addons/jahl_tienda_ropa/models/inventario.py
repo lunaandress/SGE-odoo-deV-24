@@ -14,7 +14,7 @@ class Inventario(models.Model):
     def _verificar_stock(self):
         """Verifica si el stock es suficiente y si debe reponerse"""
         for record in self:
-            if record.cantidad <= 5:  # Considera bajo inventario cuando haya 5 o menos unidades
+            if record.cantidad <= 5:
                 record.ubicacion = "Reponer Stock"
             else:
                 record.ubicacion = "Stock Suficiente"

@@ -5,18 +5,18 @@ class Producto(models.Model):
     _name = 'jahl_tienda_ropa.producto'
     _description = 'Producto de la tienda de ropa'
 
-    # Campos de la clase Producto
+    
     nombre = fields.Char(string='Nombre', required=True)
     descripcion = fields.Text(string='Descripción')
     precio = fields.Float(string='Precio', required=True)
     stock = fields.Integer(string='Stock', default=0)
     categoria = fields.Selection(
         [('camisa', 'Camisa'), ('pantalon', 'Pantalón'), ('zapato', 'Zapato')],
-        string='Categoría', default='camisa'  # Definir una categoría predeterminada
+        string='Categoría', default='camisa'
     )
     imagen = fields.Image(string="Imagen del Producto")
 
-    # Métodos
+    
     def actualizar_stock(self, cantidad):
         """Método para actualizar el stock del producto"""
         self.stock += cantidad

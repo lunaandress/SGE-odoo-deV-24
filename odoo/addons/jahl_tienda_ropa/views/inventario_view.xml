@@ -1,5 +1,5 @@
 <odoo>
-    <!-- Vista de lista para el inventario -->
+    
     <record id="jahl_tienda_ropa.inventario_tree" model="ir.ui.view">
         <field name="name">jahl.tienda_ropa.inventario.tree</field>
         <field name="model">jahl_tienda_ropa.inventario</field>
@@ -13,7 +13,7 @@
         </field>
     </record>
 
-    <!-- Vista de formulario para el inventario -->
+    
     <record id="jahl_tienda_ropa.inventario_form" model="ir.ui.view">
         <field name="name">jahl.tienda_ropa.inventario.form</field>
         <field name="model">jahl_tienda_ropa.inventario</field>
@@ -32,7 +32,7 @@
         </field>
     </record>
 
-    <!-- Acción para abrir la vista de inventarios -->
+    
     <record id="action_inventario" model="ir.actions.act_window">
         <field name="name">Inventario</field>
         <field name="res_model">jahl_tienda_ropa.inventario</field>
@@ -40,6 +40,6 @@
         <field name="target">current</field>
     </record>
 
-    <!-- Menú para acceder al modelo Inventario -->
+    
     <menuitem id="menu_inventario" name="Inventario" parent="menu_root" action="action_inventario"/>
 </odoo>
