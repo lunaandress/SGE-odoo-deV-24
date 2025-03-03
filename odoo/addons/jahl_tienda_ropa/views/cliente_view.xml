@@ -1,0 +1,51 @@
+<odoo>
+    <!-- Menú raíz para el módulo -->
+    <menuitem id="menu_root" name="Tienda de Ropa" sequence="1"/>
+
+    <!-- Vista de lista para los clientes -->
+    <record id="view_cliente_tree" model="ir.ui.view">
+        <field name="name">jahl.tiendaropa.cliente.tree</field>
+        <field name="model">jahl_tiendaropa.cliente</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre"/>
+                <field name="apellido"/>
+                <field name="correo"/>
+                <field name="telefono"/>
+                <field name="fecha_registro"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de formulario para los clientes -->
+    <record id="view_cliente_form" model="ir.ui.view">
+        <field name="name">jahl.tiendaropa.cliente.form</field>
+        <field name="model">jahl_tiendaropa.cliente</field>
+        <field name="arch" type="xml">
+            <form string="Cliente">
+                <sheet>
+                    <group>
+                        <field name="nombre"/>
+                        <field name="apellido"/>
+                        <field name="correo"/>
+                        <field name="telefono"/>
+                        <field name="direccion"/>
+                        <field name="fecha_registro"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción para abrir la vista de clientes -->
+    <record id="action_cliente" model="ir.actions.act_window">
+        <field name="name">Clientes</field>
+        <field name="res_model">jahl_tiendaropa.cliente</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">current</field>
+    </record>
+
+    <!-- Menú para acceder al modelo Cliente -->
+    <!-- Asegúrate de que 'menu_root' ya está definido antes de hacer referencia a él -->
+    <menuitem id="menu_cliente" name="Clientes" parent="menu_root" action="action_cliente"/>
+</odoo>

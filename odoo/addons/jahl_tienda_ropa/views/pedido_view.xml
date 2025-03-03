@@ -1,0 +1,45 @@
+<odoo>
+    <!-- Vista de lista para pedidos -->
+    <record id="jahl_tienda_ropa.pedido_tree" model="ir.ui.view">
+        <field name="name">jahl.tienda_ropa.pedido.tree</field>
+        <field name="model">jahl_tienda_ropa.pedido</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="cliente_id"/>
+                <field name="fecha_pedido"/>
+                <field name="estado"/>
+                <field name="total"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de formulario para pedidos -->
+    <record id="jahl_tienda_ropa.pedido_form" model="ir.ui.view">
+        <field name="name">jahl.tienda_ropa.pedido.form</field>
+        <field name="model">jahl_tienda_ropa.pedido</field>
+        <field name="arch" type="xml">
+            <form string="Pedido">
+                <sheet>
+                    <group>
+                        <field name="cliente_id"/>
+                        <field name="producto_ids"/>
+                        <field name="fecha_pedido"/>
+                        <field name="estado"/>
+                        <field name="total"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción para abrir la vista de pedidos -->
+    <record id="action_pedido" model="ir.actions.act_window">
+        <field name="name">Pedidos</field>
+        <field name="res_model">jahl_tienda_ropa.pedido</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">current</field>
+    </record>
+
+    <!-- Menú para acceder al modelo Pedido -->
+    <menuitem id="menu_pedido" name="Pedidos" parent="menu_root" action="action_pedido"/>
+</odoo>

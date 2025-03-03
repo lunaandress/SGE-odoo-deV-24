@@ -1,0 +1,27 @@
+<odoo>
+    <!-- Grupo: Administrador de Clientes -->
+    <record id="group_cliente_admin" model="res.groups">
+        <field name="name">Administrador de Clientes</field>
+        <field name="category_id" ref="base.module_category_sales"/>
+    </record>
+
+    <!-- Grupo: Usuario Interno de Clientes -->
+    <record id="group_cliente_user" model="res.groups">
+        <field name="name">Usuario Interno de Clientes</field>
+        <field name="category_id" ref="base.module_category_sales"/>
+    </record>
+
+    <!-- Grupo: Administrador de Productos -->
+    <record id="group_producto_admin" model="res.groups">
+        <field name="name">Administrador de Productos</field>
+        <field name="category_id" ref="base.module_category_sales"/>
+    </record>
+
+    <!-- Grupo: Usuario Interno de Productos -->
+    <record id="group_producto_user" model="res.groups">
+        <field name="name">Usuario Interno de Productos</field>
+        <field name="category_id" ref="base.module_category_sales"/>
+    </record>
+
+    
+</odoo>

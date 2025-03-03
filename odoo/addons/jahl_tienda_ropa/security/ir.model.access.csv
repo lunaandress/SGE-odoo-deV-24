@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cliente_admin,jahl_tienda_ropa.cliente_admin,model_jahl_tienda_ropa_cliente,jahl_tienda_ropa.group_cliente_admin,1,1,1,1
+access_cliente_user,jahl_tienda_ropa.cliente_user,model_jahl_tienda_ropa_cliente,jahl_tienda_ropa.group_cliente_user,1,0,1,0
+access_producto_admin,jahl_tienda_ropa.producto_admin,model_jahl_tienda_ropa_producto,jahl_tienda_ropa.group_producto_admin,1,1,1,1
+access_producto_user,jahl_tienda_ropa.producto_user,model_jahl_tienda_ropa_producto,jahl_tienda_ropa.group_producto_user,1,0,1,0
