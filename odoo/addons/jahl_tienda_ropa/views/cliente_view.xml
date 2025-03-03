@@ -3,9 +3,11 @@
     <menuitem id="menu_root" name="Tienda de Ropa" sequence="1"/>
 
     <!-- Vista de lista para los clientes -->
+
     <record id="jahl_tienda_ropa.cliente_tree" model="ir.ui.view">
         <field name="name">jahl.tienda_ropa.cliente.tree</field>
         <field name="model">jahl_tienda_ropa.cliente</field>
+
         <field name="arch" type="xml">
             <tree>
                 <field name="nombre"/>

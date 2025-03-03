@@ -23,7 +23,10 @@ Long description of module's purpose
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+<<<<<<< HEAD
         'security/jahl_tienda_ropa_groups.xml',
+=======
+>>>>>>> b85a15540b767252573030f644aad42f0a341441
         'views/views.xml',
         'views/templates.xml',
         'views/producto_view.xml',
@@ -32,7 +35,10 @@ Long description of module's purpose
         'views/inventario_view.xml',
         
     ],
+<<<<<<< HEAD
     'icon': '/jahl_tienda_ropa/static/description/tienda_ropa.png',  # Ruta al ícono
+=======
+>>>>>>> b85a15540b767252573030f644aad42f0a341441
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
