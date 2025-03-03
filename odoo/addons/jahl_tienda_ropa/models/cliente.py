@@ -11,8 +11,6 @@ class Cliente(models.Model):
     telefono = fields.Char(string='Teléfono')
     direccion = fields.Text(string='Dirección')
     fecha_registro = fields.Datetime(string='Fecha de Registro', default=fields.Datetime.now)
-
-    # Campo One2many relacionado con los pedidos
     orden_ids = fields.One2many('jahl_tienda_ropa.pedido', 'cliente_id', string='Órdenes')
 
     # Métodos

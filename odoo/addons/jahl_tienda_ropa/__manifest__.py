@@ -30,7 +30,8 @@ Long description of module's purpose
         'views/cliente_view.xml',
         'views/pedido_view.xml',
         'views/inventario_view.xml',
-        
+        'views/pedido_Kanban.xml',
+
     ],
     'icon': '/jahl_tienda_ropa/static/description/tienda_ropa.png',  # Ruta al ícono
     # only loaded in demonstration mode
