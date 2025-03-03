@@ -32,6 +32,7 @@ Long description of module's purpose
         'views/inventario_view.xml',
         
     ],
+    'icon': '/jahl_tienda_ropa/static/description/tienda_ropa.png',  # Ruta al ícono
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
