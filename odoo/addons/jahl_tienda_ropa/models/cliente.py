@@ -12,8 +12,8 @@ class Cliente(models.Model):
     direccion = fields.Text(string='Dirección')
     fecha_registro = fields.Datetime(string='Fecha de Registro', default=fields.Datetime.now)
 
-    # Relación con las órdenes (si deseas agregar un modelo de órdenes en el futuro)
-    # orden_ids = fields.One2many('jahl_tiendaropa.orden', 'cliente_id', string='Órdenes')
+    # Campo One2many relacionado con los pedidos
+    orden_ids = fields.One2many('jahl_tienda_ropa.pedido', 'cliente_id', string='Órdenes')
 
     # Métodos
     def obtener_datos_completos(self):
