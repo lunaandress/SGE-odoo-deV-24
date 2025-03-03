@@ -23,5 +23,31 @@
         <field name="category_id" ref="base.module_category_sales"/>
     </record>
 
+    <!-- Grupo: Administrador de Pedidos -->
+    <record id="group_pedido_admin" model="res.groups">
+        <field name="name">Administrador de Pedidos</field>
+        <field name="category_id" ref="base.module_category_sales"/>
+    </record>
+
+    <!-- Grupo: Usuario Interno de Pedidos -->
+    <record id="group_pedido_user" model="res.groups">
+        <field name="name">Usuario Interno de Pedidos</field>
+        <field name="category_id" ref="base.module_category_sales"/>
+    </record>
+
+    <!-- Grupo: Iventario de Pedidos -->
+    <record id="group_inventario_admin" model="res.groups">
+        <field name="name">Administrador de Inventario</field>
+        <field name="category_id" ref="base.module_category_sales"/>
+    </record>
+
+    <!-- Grupo: Usuario Interno de Inventario -->
+    <record id="group_inventario_user" model="res.groups">
+        <field name="name">Usuario Interno de Inventario</field>
+        <field name="category_id" ref="base.module_category_sales"/>
+    </record>
+
+    
+
     
 </odoo>
