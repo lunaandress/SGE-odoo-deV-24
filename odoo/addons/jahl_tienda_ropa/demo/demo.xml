@@ -1,30 +1,97 @@
 <odoo>
     <data>
-<!--
-          <record id="object0" model="jahl_tienda_ropa.jahl_tienda_ropa">
-            <field name="name">Object 0</field>
-            <field name="value">0</field>
-          </record>
 
-          <record id="object1" model="jahl_tienda_ropa.jahl_tienda_ropa">
-            <field name="name">Object 1</field>
-            <field name="value">10</field>
-          </record>
+        <record id="cliente_1" model="jahl_tienda_ropa.cliente">
+            <field name="nombre">Carlos</field>
+            <field name="apellido">Gómez</field>
+            <field name="correo">carlos.gomez@correo.com</field>
+            <field name="telefono">5551234567</field>
+            <field name="direccion">Calle Ficticia 123</field>
+            <field name="fecha_registro">2025-03-05 10:00:00</field>
+        </record>
 
-          <record id="object2" model="jahl_tienda_ropa.jahl_tienda_ropa">
-            <field name="name">Object 2</field>
-            <field name="value">20</field>
-          </record>
+        <record id="cliente_2" model="jahl_tienda_ropa.cliente">
+            <field name="nombre">Ana</field>
+            <field name="apellido">Martínez</field>
+            <field name="correo">ana.martinez@correo.com</field>
+            <field name="telefono">5559876543</field>
+            <field name="direccion">Avenida Libertad 456</field>
+            <field name="fecha_registro">2025-03-05 11:00:00</field>
+        </record>
 
-          <record id="object3" model="jahl_tienda_ropa.jahl_tienda_ropa">
-            <field name="name">Object 3</field>
-            <field name="value">30</field>
-          </record>
+        <record id="cliente_3" model="jahl_tienda_ropa.cliente">
+            <field name="nombre">Luis</field>
+            <field name="apellido">Pérez</field>
+            <field name="correo">luis.perez@correo.com</field>
+            <field name="telefono">5552468135</field>
+            <field name="direccion">Calle Sol 789</field>
+            <field name="fecha_registro">2025-03-05 12:00:00</field>
+        </record>
 
-          <record id="object4" model="jahl_tienda_ropa.jahl_tienda_ropa">
-            <field name="name">Object 4</field>
-            <field name="value">40</field>
-          </record>
--->
+        <record id="producto_1" model="jahl_tienda_ropa.producto">
+            <field name="nombre">Camisa de cuadros</field>
+            <field name="descripcion">Camisa de manga larga , talla M.</field>
+            <field name="precio">29.99</field>
+            <field name="stock">100</field>
+            <field name="categoria">camisa</field>
+        </record>
+
+        <record id="producto_2" model="jahl_tienda_ropa.producto">
+            <field name="nombre">Pantalón Negro</field>
+            <field name="descripcion">Pantalón de corte recto color beige, talla 32.</field>
+            <field name="precio">49.99</field>
+            <field name="stock">50</field>
+            <field name="categoria">pantalon</field>
+        </record>
+
+        <record id="producto_3" model="jahl_tienda_ropa.producto">
+            <field name="nombre">Zapatos Deportivos</field>
+            <field name="descripcion">Zapatos deportivos en color negro, talla 42.</field>
+            <field name="precio">59.99</field>
+            <field name="stock">75</field>
+            <field name="categoria">zapato</field>
+        </record>
+
+        <record id="pedido_1" model="jahl_tienda_ropa.pedido">
+            <field name="cliente_id" ref="cliente_1"/>
+            <field name="producto_ids" eval="[(6, 0, [ref('producto_1'), ref('producto_2')])]"/>
+            <field name="fecha_pedido">2025-03-05 10:30:00</field>
+            <field name="estado">pendiente</field>
+        </record>
+
+        <record id="pedido_2" model="jahl_tienda_ropa.pedido">
+            <field name="cliente_id" ref="cliente_2"/>
+            <field name="producto_ids" eval="[(6, 0, [ref('producto_3')])]"/>
+            <field name="fecha_pedido">2025-03-05 11:15:00</field>
+            <field name="estado">procesado</field>
+        </record>
+
+        <record id="pedido_3" model="jahl_tienda_ropa.pedido">
+            <field name="cliente_id" ref="cliente_3"/>
+            <field name="producto_ids" eval="[(6, 0, [ref('producto_1'), ref('producto_3')])]"/>
+            <field name="fecha_pedido">2025-03-05 12:00:00</field>
+            <field name="estado">enviado</field>
+        </record>
+
+        <record id="inventario_1" model="jahl_tienda_ropa.inventario">
+            <field name="producto_id" ref="producto_1"/>
+            <field name="cantidad">10</field>
+            <field name="ubicacion">Estante A1</field>
+            <field name="fecha_actualizacion">2025-03-05 10:00:00</field>
+        </record>
+
+        <record id="inventario_2" model="jahl_tienda_ropa.inventario">
+            <field name="producto_id" ref="producto_2"/>
+            <field name="cantidad">3</field>
+            <field name="ubicacion">Estante B2</field>
+            <field name="fecha_actualizacion">2025-03-05 11:00:00</field>
+        </record>
+
+        <record id="inventario_3" model="jahl_tienda_ropa.inventario">
+            <field name="producto_id" ref="producto_3"/>
+            <field name="cantidad">20</field>
+            <field name="ubicacion">Estante C3</field>
+            <field name="fecha_actualizacion">2025-03-05 12:00:00</field>
+        </record>
     </data>
 </odoo>
