@@ -34,6 +34,7 @@
             <field name="precio">29.99</field>
             <field name="stock">100</field>
             <field name="categoria">camisa</field>
+            <field name="imagen" type ="base64" file ="jahl_tienda_ropa/static/description/camiseta.jpg"></field>
         </record>
 
         <record id="producto_2" model="jahl_tienda_ropa.producto">
@@ -42,14 +43,16 @@
             <field name="precio">49.99</field>
             <field name="stock">50</field>
             <field name="categoria">pantalon</field>
+            <field name="imagen" type ="base64" file ="jahl_tienda_ropa/static/description/pantalon.jpg"></field>
         </record>
 
         <record id="producto_3" model="jahl_tienda_ropa.producto">
-            <field name="nombre">Zapatos Deportivos</field>
-            <field name="descripcion">Zapatos deportivos en color negro, talla 42.</field>
+            <field name="nombre">Zapatos Casuales</field>
+            <field name="descripcion">Zapatos casuales en color negro, talla 42.</field>
             <field name="precio">59.99</field>
             <field name="stock">75</field>
             <field name="categoria">zapato</field>
+            <field name="imagen" type ="base64" file ="jahl_tienda_ropa/static/description/zapato.jpg"></field>
         </record>
 
         <record id="pedido_1" model="jahl_tienda_ropa.pedido">
